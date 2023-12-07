@@ -1,4 +1,9 @@
-"""Enumerating Gene Orders."""
+"""Enumerating Gene Orders.
+
+Given: A positive integer n ≤ 7.
+
+Return: The total number of permutations of length n, followed by a list of all such permutations (in any order).
+"""
 
 from itertools import permutations
 
