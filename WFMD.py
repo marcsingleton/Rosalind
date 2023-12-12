@@ -1,4 +1,10 @@
-"""The Wright-Fisher Model of Genetic Drift."""
+"""The Wright-Fisher Model of Genetic Drift.
+
+Given: Positive integers N (N ≤ 7), m (m ≤ 2N), g (g ≤ 6) and k (k ≤ 2N).
+
+Return: The probability that in a population of N diploid individuals initially possessing m copies of a dominant
+allele, we will observe after g generations at least k copies of a recessive allele. Assume the Wright-Fisher model.
+"""
 
 from math import comb
 
