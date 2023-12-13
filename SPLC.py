@@ -72,7 +72,7 @@ seq = seq.replace('T', 'U')
 gencode = {}
 with open('constants/codons.txt') as file:
     for line in file:
-        keyvals = line.rstrip().split('\t')
+        keyvals = line.rstrip('\n').split('\t')
         for keyval in keyvals:
             codon, aa = keyval.split()
             gencode[codon] = aa

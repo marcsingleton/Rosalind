@@ -21,7 +21,7 @@ data = """\
 101.04768 158.06914 202.09536 318.09979 419.14747 463.17369
 """
 
-line1, line2 = data.rstrip().split('\n')
+line1, line2 = data.rstrip('\n').split('\n')
 values1 = [float(value) for value in line1.split()]
 values2 = [float(value) for value in line2.split()]
 
