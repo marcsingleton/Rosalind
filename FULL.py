@@ -12,6 +12,16 @@ exist, you may output any one.
 
 from math import isclose
 
+
+def get_match(dx, dy, aa2weight):
+    for aa, weight in aa2weight.items():
+        if isclose(dx, weight):
+            return index, False, aa
+        if isclose(dy, weight):
+            return index, True, aa
+    return None
+
+
 data = """\
 1988.21104821
 610.391039105
@@ -65,13 +75,9 @@ while pairs:
     for index, (x2, y2) in enumerate(pairs):
         dx = x2 - x1
         dy = y2 - x1
-        for aa, weight in aa2weight.items():
-            if isclose(dx, weight):
-                match = (index, False, aa)
-                break
-            if isclose(dy, weight):
-                match = (index, True, aa)
-                break
+        match = get_match(dx, dy, aa2weight)
+        if match is not None:
+            break
     if match is not None:
         index, swap, aa = match
         x1, y1 = pairs.pop(index)
