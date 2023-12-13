@@ -30,6 +30,6 @@ for seq in seqs:
     if kmer2 not in graph:
         graph[kmer2] = set()
 
-for node1, adjs in graph.items():
-    for node2 in adjs:
+for node1, adjacents in graph.items():
+    for node2 in adjacents:
         print(f'({node1}, {node2})')
