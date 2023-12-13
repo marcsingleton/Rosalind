@@ -22,19 +22,19 @@ seqs = data.rstrip('\n').split('\n')
 
 graph = {}
 for seq in seqs:
-    kmer1, kmer2 = seq[:-1], seq[1:]
-    if kmer1 not in graph:
-        graph[kmer1] = {kmer2}
+    prefix, suffix = seq[:-1], seq[1:]
+    if prefix not in graph:
+        graph[prefix] = {suffix}
     else:
-        graph[kmer1].add(kmer2)
-    if kmer2 not in graph:
-        graph[kmer2] = set()
+        graph[prefix].add(suffix)
+    if suffix not in graph:
+        graph[suffix] = set()
 
-kmer0 = seqs[0][:-1]
-kmer = list(graph[kmer0])[0]
-chromosome = [kmer[-1]]
-while kmer != kmer0:
-    kmer = list(graph[kmer])[0]
-    chromosome.append(kmer[-1])
+prefix0 = list(graph)[0]
+prefix = list(graph[prefix0])[0]
+chromosome = [prefix[-1]]
+while prefix != prefix0:
+    prefix = list(graph[prefix])[0]
+    chromosome.append(prefix[-1])
 
 print(''.join(chromosome))

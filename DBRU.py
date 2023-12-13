@@ -22,13 +22,13 @@ seqs = seqs + [reverse_complement(seq) for seq in seqs]
 
 graph = {}
 for seq in seqs:
-    kmer1, kmer2 = seq[:-1], seq[1:]
-    if kmer1 not in graph:
-        graph[kmer1] = {kmer2}
+    prefix, suffix = seq[:-1], seq[1:]
+    if prefix not in graph:
+        graph[prefix] = {suffix}
     else:
-        graph[kmer1].add(kmer2)
-    if kmer2 not in graph:
-        graph[kmer2] = set()
+        graph[prefix].add(suffix)
+    if suffix not in graph:
+        graph[suffix] = set()
 
 for node1, adjacents in graph.items():
     for node2 in adjacents:
