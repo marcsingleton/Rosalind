@@ -7,8 +7,8 @@ Return: An array B of length m for which B[k] is the expected value of Bin(n, P[
 represents the expected allele frequency of the next generation.
 """
 
-n = 963543
-P = '0 0.235846326168 0.245970930566 0.272386897098 0.327089261156 0.333579069144 0.348970284702 0.404237647064 0.456589061833 0.595076758932 0.605288862874 0.719838974521 0.770456255548 0.873245670305 0.925035074137 1'
+n = 17
+P = '0.1 0.2 0.3'
 
 P = [float(p) for p in P.split()]
 

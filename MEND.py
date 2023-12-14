@@ -12,7 +12,7 @@ import os
 from utils import read_newick
 
 data = """\
-(((((((AA,Aa),(aa,AA)),((aa,aa),(aa,AA))),Aa),((((aa,AA),(Aa,aa)),((aa,Aa),(AA,Aa))),Aa)),(((((AA,aa),AA),((Aa,Aa),(aa,AA))),aa),Aa)),((((((aa,Aa),(aa,Aa)),Aa),(((AA,AA),(aa,AA)),((AA,AA),(Aa,AA)))),Aa),aa));
+((((Aa,aa),(Aa,Aa)),((aa,aa),(aa,AA))),Aa);
 """
 
 genotypes = ('AA', 'Aa', 'aa')
