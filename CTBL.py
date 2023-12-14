@@ -7,6 +7,8 @@ encode the taxa ordered lexicographically; the rows of the character table may b
 given character, the particular subset of taxa to which 1s are assigned is arbitrary.
 """
 
+import os
+
 from utils import read_newick
 
 data = """\
@@ -41,3 +43,5 @@ for node in tree.traverse():
 
 for characters in table:
     print(''.join([str(character) for character in characters]))
+
+os.remove(data_path)
