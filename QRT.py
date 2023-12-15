@@ -27,8 +27,6 @@ for characters in table:
             c0.append(taxon)
         elif character == '1':
             c1.append(taxon)
-    if len(c0) < 2 or len(c1) < 2:
-        continue
     pairs0 = combinations(c0, 2)
     pairs1 = combinations(c1, 2)
     for pair0, pair1 in product(pairs0, pairs1):

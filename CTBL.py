@@ -25,8 +25,6 @@ taxa_set = set(taxa_order)
 
 table = []
 for node in tree.traverse():
-    if node.is_tip():
-        continue
     for child in node.children:
         split1 = {tip.name for tip in child.tips()}
         split2 = taxa_set - split1
