@@ -32,7 +32,7 @@ dog cat
 dog cat
 """
 
-lines = data.split('\n')
+lines = data.rstrip('\n').split('\n')
 i = 0
 records = []
 while i < len(lines):
