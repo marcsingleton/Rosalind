@@ -9,7 +9,7 @@ n = 10
 A = {1, 2, 3, 4, 5}
 B = {2, 8, 5, 10}
 
-U = set([i+1 for i in range(n)])
+U = {i+1 for i in range(n)}
 print(A.union(B))
 print(A.intersection(B))
 print(A - B)
