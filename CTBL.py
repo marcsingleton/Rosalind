@@ -20,9 +20,9 @@ with open(data_path, 'w') as file:
     file.write(data)
 
 tree = read_newick(data_path)
-
 taxa_order = sorted([tip.name for tip in tree.tips()])
 taxa_set = set(taxa_order)
+
 table = []
 for node in tree.traverse():
     if node.is_tip():
