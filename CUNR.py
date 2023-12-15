@@ -12,7 +12,6 @@ mod = int(1E6)
 e = 2 * (n - 1) - 3
 b = 1
 for i in range(e, 1, -2):
-    b *= i
-    b %= mod
+    b = (b * i) % mod
 
 print(b)

@@ -7,6 +7,7 @@ Return: The total number of different RNA strings from which the protein could h
 """
 
 seq = 'MA'
+mod = int(1E6)
 
 gencode = {}
 with open('constants/codons.txt') as file:
@@ -18,5 +19,5 @@ with open('constants/codons.txt') as file:
 
 count = 1
 for sym in seq + '*':  # Append stop codon
-    count = (count * gencode[sym]) % 1E6
+    count = (count * gencode[sym]) % mod
 print(count)
