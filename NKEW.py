@@ -37,7 +37,7 @@ while i < len(lines):
         i += 1
         continue
 
-    data_path = 'NWCK.txt'
+    data_path = 'NKEW.txt'
     with open(data_path, 'w') as file:
         file.write(lines[i])
     tree = read_newick(data_path)

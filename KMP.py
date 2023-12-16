@@ -14,7 +14,7 @@ data = """\
 CAGCATGGTATCACAGCAGAG
 """
 
-data_path = 'LCSM.txt'
+data_path = 'KMP.txt'
 with open(data_path, 'w') as file:
     file.write(data)
 fasta = list(read_fasta(data_path))
