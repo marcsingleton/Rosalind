@@ -20,8 +20,9 @@ UCCGGAACUACAAUGGCACCGCGCCAUUGUCUUA
 data_path = 'MMCH.txt'
 with open(data_path, 'w') as file:
     file.write(data)
-
 fasta = list(read_fasta(data_path))
+os.remove(data_path)
+
 _, seq = fasta[0]
 
 counts = {sym: 0 for sym in 'ACGU'}
@@ -35,5 +36,3 @@ n, k = max(counts['C'], counts['G']), min(counts['C'], counts['G'])
 pCG = perm(n, k)
 
 print(pAU * pCG)
-
-os.remove(data_path)

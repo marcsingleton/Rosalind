@@ -27,8 +27,9 @@ GTTCCATTTA
 data_path = 'PDST.txt'
 with open(data_path, 'w') as file:
     file.write(data)
-
 fasta = list(read_fasta(data_path))
+os.remove(data_path)
+
 indices = {seq_id: index for index, (seq_id, _) in enumerate(fasta)}
 
 array = np.zeros((len(fasta), len(fasta)))
@@ -41,5 +42,3 @@ for (seq_id1, seq1), (seq_id2, seq2) in product(fasta, fasta):
 
 for row in array:
     print(' '.join([str(value) for value in row]))
-
-os.remove(data_path)

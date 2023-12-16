@@ -43,8 +43,8 @@ r = 0.5
 data_path = 'LONG.txt'
 with open(data_path, 'w') as file:
     file.write(data)
-
 fasta = dict(read_fasta(data_path))
+os.remove(data_path)
 
 graph = {header: [] for header in fasta}
 for (header1, seq1), (header2, seq2) in permutations(fasta.items(), 2):
@@ -77,5 +77,3 @@ for start_header in start_headers:
 
 for superstring in superstrings:
     print(superstring)
-
-os.remove(data_path)

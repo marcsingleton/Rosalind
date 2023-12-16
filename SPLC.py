@@ -23,8 +23,8 @@ ATCGGTCGAGCGTGT
 data_path = 'SPLC.txt'
 with open(data_path, 'w') as file:
     file.write(data)
-
 fasta = list(read_fasta(data_path))
+os.remove(data_path)
 
 _, seq = fasta[0]
 for _, intron in fasta[1:]:
@@ -45,5 +45,3 @@ for i in range(0, len(seq) - 3, 3):
     codon = seq[i:i+3]
     aas.append(gencode[codon])
 print(''.join(aas))
-
-os.remove(data_path)

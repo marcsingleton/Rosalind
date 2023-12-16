@@ -26,10 +26,10 @@ k = 4
 data_path = 'KMER.txt'
 with open(data_path, 'w') as file:
     file.write(data)
-
 fasta = list(read_fasta(data_path))
-_, seq = fasta[0]
+os.remove(data_path)
 
+_, seq = fasta[0]
 alphabet = list(set(seq))
 
 kmer2index = {}
@@ -43,5 +43,3 @@ for i in range(len(seq) - k + 1):
     array[index] += 1
 
 print(' '.join([str(value) for value in array]))
-
-os.remove(data_path)

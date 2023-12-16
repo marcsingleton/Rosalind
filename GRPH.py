@@ -25,8 +25,8 @@ GGGTGGG
 data_path = 'GRPH.txt'
 with open(data_path, 'w') as file:
     file.write(data)
-
 fasta = list(read_fasta(data_path))
+os.remove(data_path)
 
 for header1, seq1 in fasta:
     for header2, seq2 in fasta:
@@ -34,5 +34,3 @@ for header1, seq1 in fasta:
             continue
         elif seq1[-3:] == seq2[:3]:
             print(header1, header2)
-
-os.remove(data_path)

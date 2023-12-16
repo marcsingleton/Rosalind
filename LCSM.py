@@ -30,8 +30,8 @@ ATACA
 data_path = 'LCSM.txt'
 with open(data_path, 'w') as file:
     file.write(data)
-
 fasta = list(read_fasta(data_path))
+os.remove(data_path)
 
 substring_sets = []
 for _, seq in fasta:
@@ -40,5 +40,3 @@ for _, seq in fasta:
 common_substrings = set.intersection(*substring_sets)
 longest_substring = max(common_substrings, key=len)
 print(longest_substring)
-
-os.remove(data_path)

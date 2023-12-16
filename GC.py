@@ -26,8 +26,8 @@ TGGGAACCTGCGGGCAGTAGGTGGAAT
 data_path = 'GC.txt'
 with open(data_path, 'w') as file:
     file.write(data)
-
 fasta = list(read_fasta(data_path))
+os.remove(data_path)
 
 gcs = []
 for header, seq in fasta:
@@ -39,5 +39,3 @@ for header, seq in fasta:
 max_id, max_gc = max(gcs, key=lambda x: x[1])
 print(max_id)
 print(max_gc)
-
-os.remove(data_path)

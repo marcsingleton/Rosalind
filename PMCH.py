@@ -21,8 +21,9 @@ CCUCUACAGCUCCUGCUGAG
 data_path = 'PMCH.txt'
 with open(data_path, 'w') as file:
     file.write(data)
-
 fasta = list(read_fasta(data_path))
+os.remove(data_path)
+
 _, seq = fasta[0]
 
 counts = {sym: 0 for sym in 'ACGU'}
@@ -35,5 +36,3 @@ if counts['A'] != counts['U'] or counts['C'] != counts['G']:
 pAU = factorial(counts['A'])
 pCG = factorial(counts['C'])
 print(pAU * pCG)
-
-os.remove(data_path)

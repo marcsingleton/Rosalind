@@ -40,8 +40,9 @@ for sym1, sym2 in pairs:
 data_path = 'REVP.txt'
 with open(data_path, 'w') as file:
     file.write(data)
-
 fasta = list(read_fasta(data_path))
+os.remove(data_path)
+
 header, seq = fasta[0]
 
 # Initialize DP array
@@ -65,5 +66,3 @@ for i in range(n):
     for j in range(i, n):
         if array[i, j] and 4 <= j - i + 1 <= 12:
             print(i + 1, j - i + 1)
-
-os.remove(data_path)

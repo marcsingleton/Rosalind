@@ -17,8 +17,9 @@ CAGCATGGTATCACAGCAGAG
 data_path = 'LCSM.txt'
 with open(data_path, 'w') as file:
     file.write(data)
-
 fasta = list(read_fasta(data_path))
+os.remove(data_path)
+
 header, seq = fasta[0]
 
 array = [0 for _ in seq]
@@ -32,5 +33,3 @@ for j in range(1, len(seq)):
             break
 
 print(' '.join([str(value) for value in array]))
-
-os.remove(data_path)

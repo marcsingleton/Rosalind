@@ -30,8 +30,8 @@ ATGGCACT
 data_path = 'CONS.txt'
 with open(data_path, 'w') as file:
     file.write(data)
-
 fasta = list(read_fasta(data_path))
+os.remove(data_path)
 
 profile = []
 consensus = []
@@ -45,5 +45,3 @@ for i in range(len(fasta[0][1])):
 print(''.join(consensus))
 for sym in ('A', 'C', 'G', 'T'):
     print(sym, ': ', ' '.join([str(counts[sym]) for counts in profile]), sep='')
-
-os.remove(data_path)

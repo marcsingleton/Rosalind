@@ -20,8 +20,8 @@ genotypes = ('AA', 'Aa', 'aa')
 data_path = 'MEND.txt'
 with open(data_path, 'w') as file:
     file.write(data)
-
 tree = read_newick(data_path)
+os.remove(data_path)
 
 for node in tree.traverse(order='post'):
     if node.is_tip():
@@ -40,5 +40,3 @@ for node in tree.traverse(order='post'):
         node.ps = ps
 
 print(' '.join([str(value) for value in tree.ps.values()]))
-
-os.remove(data_path)

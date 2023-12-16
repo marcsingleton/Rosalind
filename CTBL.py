@@ -18,8 +18,9 @@ data = """\
 data_path = 'CTBL.txt'
 with open(data_path, 'w') as file:
     file.write(data)
-
 tree = read_newick(data_path)
+os.remove(data_path)
+
 taxa_order = sorted([tip.name for tip in tree.tips()])
 taxa_set = set(taxa_order)
 
@@ -41,5 +42,3 @@ for node in tree.traverse():
 
 for characters in table:
     print(''.join([str(character) for character in characters]))
-
-os.remove(data_path)

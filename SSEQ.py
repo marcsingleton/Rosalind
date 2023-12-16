@@ -20,8 +20,9 @@ GTA
 data_path = 'SSEQ.txt'
 with open(data_path, 'w') as file:
     file.write(data)
-
 fasta = list(read_fasta(data_path))
+os.remove(data_path)
+
 _, seq1 = fasta[0]
 _, seq2 = fasta[1]
 
@@ -35,5 +36,3 @@ for seq1_index, sym in enumerate(seq1):
         break
 
 print(' '.join(str(index) for index in indices))
-
-os.remove(data_path)

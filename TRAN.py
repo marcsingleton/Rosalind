@@ -21,8 +21,9 @@ GGTACGAGTGTTCCTTTGGGT
 data_path = 'TRANS.txt'
 with open(data_path, 'w') as file:
     file.write(data)
-
 fasta = list(read_fasta(data_path))
+os.remove(data_path)
+
 _, seq1 = fasta[0]
 _, seq2 = fasta[1]
 
@@ -37,5 +38,3 @@ for sym1, sym2 in zip(seq1, seq2):
         counts['TV'] += 1
 
 print(counts['TI'] / counts['TV'])
-
-os.remove(data_path)

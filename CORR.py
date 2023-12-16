@@ -47,8 +47,9 @@ TTTCC
 data_path = 'CORR.txt'
 with open(data_path, 'w') as file:
     file.write(data)
-
 fasta = list(read_fasta(data_path))
+os.remove(data_path)
+
 seqs = [seq for _, seq in fasta]
 
 counts = {}
@@ -71,5 +72,3 @@ for seq_error in set(seqs_error) & set(seqs):
         if dH == 1:
             print(f'{seq_error}->{seq_correct}')
             break
-
-os.remove(data_path)
