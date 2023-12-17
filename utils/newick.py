@@ -16,6 +16,8 @@ class TreeNode:
         self.children = children
         self.parent = parent
         self.length = length
+        for child in self.children:
+            child.parent = self
 
     def __repr__(self):
         class_name = type(self).__name__
