@@ -24,6 +24,9 @@ class TreeNode:
         repr_string = f'<{class_name}, name: {node_name}, children count: {children_count}>'
         return repr_string
 
+    def __str__(self):
+        return self.to_newick()
+
     def traverse(self, include_self=True, order='pre'):
         if order == 'pre':
             return self._preorder(include_self=include_self)
@@ -86,6 +89,19 @@ class TreeNode:
             if not node.is_tip():
                 yield node
 
+    def to_newick(self):
+        newicks = []
+        for node in self.traverse(order='post'):
+            name = node.name if node.name is not None else ''
+            length = f':{node.length}' if node.length else ''
+            if node.is_tip():
+                newicks.append(f'{name}{length}')
+            else:
+                children_newicks = [newicks.pop() for _ in node.children]
+                newick = '(' + ', '.join(children_newicks) + f'){name}{length}'
+                newicks.append(newick)
+        newick = newicks.pop()
+        return newick + ';'
 
 
 def read_newick(path):
