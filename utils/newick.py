@@ -91,6 +91,21 @@ class TreeNode:
             if not node.is_tip():
                 yield node
 
+    def copy(self):
+        copies = []
+        for node in self.traverse(order='post'):
+            if node.is_tip():
+                cls = type(node)
+                copy = cls(name=node.name, length=node.length)
+                copies.append(copy)
+            else:
+                cls = type(node)
+                children_copies = [copies.pop() for _ in node.children][::-1]  # Reverse b/c post order reverses children
+                copy = cls(name=node.name, children=children_copies, length=node.length)
+                copies.append(copy)
+        copy = copies.pop()
+        return copy
+
     @staticmethod
     def from_newick(nw_string):
         nw_tokens = tokenize_newick(nw_string)
