@@ -91,6 +91,12 @@ class TreeNode:
             if not node.is_tip():
                 yield node
 
+    @staticmethod
+    def from_newick(nw_string):
+        nw_tokens = tokenize_newick(nw_string)
+        tree = parse_newick(nw_tokens)
+        return tree
+
     def to_newick(self):
         nw_strings = []
         for node in self.traverse(order='post'):
@@ -120,8 +126,7 @@ def read_newick(path):
     """
     with open(path) as file:
         nw_string = file.read().rstrip()
-        nw_tokens = tokenize_newick(nw_string)
-        tree = parse_newick(nw_tokens)
+        tree = TreeNode.from_newick(nw_string)
         return tree
 
 
