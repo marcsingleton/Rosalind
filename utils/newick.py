@@ -92,18 +92,18 @@ class TreeNode:
                 yield node
 
     def to_newick(self):
-        newicks = []
+        nw_strings = []
         for node in self.traverse(order='post'):
             name = node.name if node.name is not None else ''
             length = f':{node.length}' if node.length else ''
             if node.is_tip():
-                newicks.append(f'{name}{length}')
+                nw_strings.append(f'{name}{length}')
             else:
-                children_newicks = [newicks.pop() for _ in node.children]
-                newick = '(' + ', '.join(children_newicks) + f'){name}{length}'
-                newicks.append(newick)
-        newick = newicks.pop()
-        return newick + ';'
+                children_newicks = [nw_strings.pop() for _ in node.children]
+                nw_string = '(' + ', '.join(children_newicks) + f'){name}{length}'
+                nw_strings.append(nw_string)
+        nw_string = nw_strings.pop()
+        return nw_string + ';'
 
 
 def read_newick(path):
