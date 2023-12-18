@@ -16,11 +16,11 @@ def get_splits(tree):
     splits = set()
     for node in tree.traverse():
         for child in node.children:
-            split1 = frozenset([tip.name for tip in child.tips()])
-            split2 = frozenset(taxa_set - split1)
-            if len(split1) == 1 or len(split2) == 1:
+            s1 = frozenset([tip.name for tip in child.tips()])
+            s2 = frozenset(taxa_set - s1)
+            if len(s1) == 1 or len(s2) == 1:
                 continue
-            splits.add(frozenset([split1, split2]))
+            splits.add(frozenset([s1, s2]))
     return splits
 
 
