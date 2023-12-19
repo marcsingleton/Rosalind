@@ -50,13 +50,13 @@ for nameA, nameB, _, _ in edges:
 
 name2node = {name: TreeNode(name=name) for name in names}
 for node in name2node.values():
-    node.substrings = []
+    node.substrings = ''
     node.path = ''
 for nameA, nameB, index, length in edges:
     nodeA, nodeB = name2node[nameA], name2node[nameB]
     nodeA.children.append(nodeB)
     nodeB.parent = nodeA
-    nodeA.substrings.append(s[index-1:index-1+length])
+    nodeB.substring = s[index-1:index-1+length]
 
 name = list(names)[0]
 tree = name2node[name]
@@ -74,11 +74,11 @@ while tree.parent is not None:
 #     The candidate path is the edge substring (because going any lower would include paths below minimum)
 for node in tree.traverse(order='post'):
     paths = []
-    for child, substring in zip(node.children, node.substrings):
+    for child in node.children:
         if child.path != '':
-            paths.append(substring + child.path)
+            paths.append(child.substring + child.path)
         elif len(list(child.tips())) >= k:
-            paths.append(substring)
+            paths.append(child.substring)
     if paths:
         node.path = max(paths, key=len)
 
