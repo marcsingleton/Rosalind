@@ -20,22 +20,22 @@ seqs = data.split()
 
 tree = TreeNode(name=1)
 node_count = 2
-
 for seq in seqs:
     current_node = tree
     for sym in seq:
         matching_node = None
         for child in current_node.children:
-            if sym == child.edge:
+            if sym == child.substring:
                 matching_node = child
                 break
         if matching_node is None:
             matching_node = TreeNode(name=node_count, parent=current_node)
-            matching_node.edge = sym
+            matching_node.substring = sym
             current_node.children.append(matching_node)
             node_count += 1
         current_node = matching_node
 
 for node in tree.traverse():
     for child in node.children:
-        print(node.name, child.name, child.edge)
+        print(node.name, child.name, child.substring)
+
