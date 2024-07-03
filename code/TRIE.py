@@ -38,4 +38,3 @@ for seq in seqs:
 for node in tree.traverse():
     for child in node.children:
         print(node.name, child.name, child.substring)
-

@@ -17,4 +17,3 @@ lines = data.rstrip('\n').split('\n')
 n = int(lines[0])
 
 print(comb(n, 4) % mod)
-
