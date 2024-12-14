@@ -42,6 +42,8 @@ for characters in table:
                 children.append(child)
         if not children:  # Check that split introduces new information; may not be necessary for tables w/o repeated characters
             continue
+        if lca is tree and len(tree.children) == 3:  # Only split down to three children at root to keep unrooted
+            continue
         node_subset = TreeNode(children=children_subset, parent=lca)
         children.append(node_subset)
         lca.children = children
