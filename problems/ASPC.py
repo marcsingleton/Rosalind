@@ -7,8 +7,8 @@ Return: The sum of combinations C(n, k) for all k satisfying m ≤ k ≤n , modu
 
 from math import comb
 
-n = 1637
-m = 1121
+n = 6
+m = 3
 mod = int(1E6)
 
 total = 0
