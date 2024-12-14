@@ -21,7 +21,7 @@ def has_overlap(s1, s2, r):
     min_i = max(0, len(s1) - len(s2))
     for i in range(min_i, max_i):
         s1_suffix = s1[i:]
-        s2_prefix = s2[:len(s1)-i]
+        s2_prefix = s2[: len(s1) - i]
         if s1_suffix == s2_prefix:
             return i
     return -1

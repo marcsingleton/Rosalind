@@ -1,4 +1,4 @@
-"""	Finding a Motif in DNA.
+"""Finding a Motif in DNA.
 
 Given: Two DNA strings s and t (each of length at most 1 kbp).
 
@@ -10,6 +10,6 @@ t = 'ATAT'
 
 indexes = []
 for i in range(len(s)):
-    if s[i:i+len(t)] == t:
+    if s[i : i + len(t)] == t:
         indexes.append(str(i + 1))
 print(' '.join(indexes))

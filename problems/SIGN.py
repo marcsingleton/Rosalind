@@ -10,7 +10,7 @@ from itertools import permutations, product
 
 n = 5
 
-items = [str(i) for i in range(1, n+1)]
+items = [str(i) for i in range(1, n + 1)]
 signs = ['', '-']
 
 perms = []

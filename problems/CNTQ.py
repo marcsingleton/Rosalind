@@ -11,7 +11,7 @@ data = """\
 6
 (lobster,(cat,dog),(caterpillar,(elephant,mouse)));
 """
-mod = int(1E6)
+mod = int(1e6)
 
 lines = data.rstrip('\n').split('\n')
 n = int(lines[0])

@@ -12,7 +12,7 @@ from utils import read_fasta
 
 def get_substrings(s):
     substrings = []
-    for j in range(1, len(s)+1):
+    for j in range(1, len(s) + 1):
         for i in range(j):
             substrings.append(s[i:j])
     return substrings

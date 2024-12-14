@@ -12,7 +12,7 @@ from math import isclose
 
 def get_aa(w, aa2weight):
     for aa, weight in aa2weight.items():
-        if isclose(w, weight, abs_tol=1E-3):
+        if isclose(w, weight, abs_tol=1e-3):
             return aa
     return None
 

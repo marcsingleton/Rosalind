@@ -11,7 +11,6 @@ from math import factorial
 
 from utils import read_fasta
 
-
 data = """\
 >Rosalind_0690
 UCCCAAGAUAGCGGGUUCGAUGCAAAAAAAUAAGGUUCUGGCAACGAGUCUUGCCUGUUG

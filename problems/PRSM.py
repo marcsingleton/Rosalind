@@ -32,13 +32,13 @@ with open('constants/aa_weights.txt') as file:
 
 lines = data.rstrip('\n').split('\n')
 n = int(lines[0])
-seqs = lines[1:n+1]
-reference = [float(line) for line in lines[n+1:]]
+seqs = lines[1 : n + 1]
+reference = [float(line) for line in lines[n + 1 :]]
 
 spectra = []
 for seq in seqs:
     spectrum = []
-    for i in range(len(seq)+1):
+    for i in range(len(seq) + 1):
         prefix = seq[:i]
         suffix = seq[i:]
         prefix_weight = sum([aa2weight[aa] for aa in prefix])

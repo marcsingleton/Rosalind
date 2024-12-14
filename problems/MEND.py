@@ -34,9 +34,11 @@ for node in tree.traverse(order='post'):
         pA2 = child2.ps['AA'] + 0.5 * child2.ps['Aa']
         pa1 = 1 - pA1
         pa2 = 1 - pA2
-        ps = {'AA': pA1 * pA2,
-              'Aa': pA1 * pa2 + pa1 * pA2,
-              'aa': pa1 * pa2}
+        ps = {
+            'AA': pA1 * pA2,
+            'Aa': pA1 * pa2 + pa1 * pA2,
+            'aa': pa1 * pa2,
+        }
         node.ps = ps
 
 print(' '.join([str(value) for value in tree.ps.values()]))

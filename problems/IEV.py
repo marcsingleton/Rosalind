@@ -19,17 +19,21 @@ from itertools import product
 
 data = '1 0 0 1 0 1'
 
-couples = [('AA', 'AA'),
-           ('AA', 'Aa'),
-           ('AA', 'aa'),
-           ('Aa', 'Aa'),
-           ('Aa', 'aa'),
-           ('aa', 'aa')]
+couples = [
+    ('AA', 'AA'),
+    ('AA', 'Aa'),
+    ('AA', 'aa'),
+    ('Aa', 'Aa'),
+    ('Aa', 'aa'),
+    ('aa', 'aa'),
+]
 dominant = 0
 for count, couple in zip(data.split(), couples):
     parent1, parent2 = couple
     offsprings = []
     for allele1, allele2 in product(parent1, parent2):
         if allele1 == 'A' or allele2 == 'A':
-            dominant += 0.5 * int(count)  # Each offspring has probability 0.25, so with 2 offspring the expected count is 0.5 per couple
+            dominant += (
+                0.5 * int(count)
+            )  # Each offspring has probability 0.25, so with 2 offspring the expected count is 0.5 per couple
 print(dominant)

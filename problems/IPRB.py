@@ -10,9 +10,9 @@ allele (and thus displaying the dominant phenotype). Assume that any two organis
 k, m, n = 23, 18, 17
 
 N = k + m + n
-p_het = m/N * (m-1)/(N-1) / 4  # Two hets mating
-p_hom1 = m/N * n/(N-1)  # Homozygote dominant with het
-p_hom2 = n/N * (n-1)/(N-1)  # Two homo recessive
+p_het = m / N * (m - 1) / (N - 1) / 4  # Two hets mating
+p_hom1 = m / N * n / (N - 1)  # Homozygote dominant with het
+p_hom2 = n / N * (n - 1) / (N - 1)  # Two homo recessive
 p = 1 - p_het - p_hom1 - p_hom2
 
 print(p)

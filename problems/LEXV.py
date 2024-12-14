@@ -15,7 +15,7 @@ alphabet = alphabet.split()
 order = {sym: i for i, sym in enumerate(alphabet)}
 
 perms = []
-for k in range(1, n+1):
+for k in range(1, n + 1):
     for perm in product(*[alphabet for i in range(k)]):
         perms.append(perm)
 

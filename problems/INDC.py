@@ -12,9 +12,9 @@ n = 50
 
 p = 0.5
 
-qs = [comb(2*n, k) * p ** (2*n) for k in range(2*n+1)]
+qs = [comb(2 * n, k) * p ** (2 * n) for k in range(2 * n + 1)]
 A = []
-for i in range(1, 2*n+1):
+for i in range(1, 2 * n + 1):
     a = log10(sum(qs[i:]))
     A.append(a)
 

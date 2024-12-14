@@ -30,7 +30,7 @@ indices = []
 seq2_index = 0
 for seq1_index, sym in enumerate(seq1):
     if sym == seq2[seq2_index]:
-        indices.append(seq1_index+1)
+        indices.append(seq1_index + 1)
         seq2_index += 1
     if seq2_index == len(seq2):
         break

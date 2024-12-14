@@ -9,10 +9,10 @@ from math import comb
 
 n = 6
 m = 3
-mod = int(1E6)
+mod = int(1e6)
 
 total = 0
-for k in range(m, n+1):
+for k in range(m, n + 1):
     total = (total + comb(n, k)) % mod
 
 print(total)

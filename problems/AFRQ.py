@@ -13,7 +13,7 @@ A = [float(a) for a in A.split()]
 
 B = []
 for a in A:
-    p = a ** 0.5
+    p = a**0.5
     b = a + 2 * p * (1 - p)
     B.append(b)
 

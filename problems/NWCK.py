@@ -1,4 +1,4 @@
-"""	Distances in Trees.
+"""Distances in Trees.
 
 Given: A collection of n trees (n ≤ 40) in Newick format, with each tree containing at most 200 nodes; each tree Tk is
 followed by a pair of nodes xk and yk in Tk.
@@ -46,7 +46,7 @@ while i < len(lines):
     tree = read_newick(data_path)
     os.remove(data_path)
 
-    node_name1, node_name2 = lines[i+1].split()
+    node_name1, node_name2 = lines[i + 1].split()
     records.append((tree, node_name1, node_name2))
     i += 2
 

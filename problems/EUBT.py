@@ -8,7 +8,7 @@ format, with one tree on each line; the order of the trees is unimportant.
 
 from utils.newick import TreeNode
 
-data = "Burhinus_constricticollis Haliaetus_regius Pelecanus_grupus Phyllopneuste_leucorodia Rosalia_eburnea Thecla_taxus"
+data = 'Burhinus_constricticollis Haliaetus_regius Pelecanus_grupus Phyllopneuste_leucorodia Rosalia_eburnea Thecla_taxus'
 
 taxa = data.split()
 

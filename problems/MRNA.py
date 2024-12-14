@@ -7,7 +7,7 @@ Return: The total number of different RNA strings from which the protein could h
 """
 
 seq = 'MA'
-mod = int(1E6)
+mod = int(1e6)
 
 gencode = {}
 with open('constants/codons.txt') as file:

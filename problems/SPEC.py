@@ -21,11 +21,11 @@ with open('constants/aa_weights.txt') as file:
         aa2weight[aa] = float(weight)
 
 spectrum = [float(value) for value in data.split()]
-weights = [spectrum[i+1] - spectrum[i] for i in range(len(spectrum)-1)]
+weights = [spectrum[i + 1] - spectrum[i] for i in range(len(spectrum) - 1)]
 
 seq = []
 for weight in weights:
-    aa = min(aa2weight, key=lambda x: abs(weight-aa2weight[x]))
+    aa = min(aa2weight, key=lambda x: abs(weight - aa2weight[x]))
     seq.append(aa)
 
 print(''.join(seq))

@@ -48,7 +48,7 @@ stack = [(prefix, [prefix[-1]], reads)]
 for prefix, chromosome, reads in stack:
     if sum(reads.values()) == 0:
         chromosome = ''.join(chromosome)
-        print(chromosome[-len(prefix0):] + chromosome[:-len(prefix0)])
+        print(chromosome[-len(prefix0) :] + chromosome[: -len(prefix0)])
         continue
     for suffix in graph[prefix]:
         seq = prefix + suffix[-1]

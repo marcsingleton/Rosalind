@@ -25,17 +25,17 @@ os.remove(data_path)
 seq0 = fasta[0][1]
 seq1 = fasta[1][1]
 
-array = [[0 for _ in range(len(seq1)+1)] for _ in range(len(seq0)+1)]
-for i in range(len(seq0)+1):
-    for j in range(len(seq1)+1):
+array = [[0 for _ in range(len(seq1) + 1)] for _ in range(len(seq0) + 1)]
+for i in range(len(seq0) + 1):
+    for j in range(len(seq1) + 1):
         if i == 0:
             array[0][j] = j
         elif j == 0:
             array[i][0] = i
-        elif seq0[i-1] == seq1[j-1]:
-            array[i][j] = array[i-1][j-1]
+        elif seq0[i - 1] == seq1[j - 1]:
+            array[i][j] = array[i - 1][j - 1]
         else:
-            array[i][j] = 1 + min(array[i-1][j-1], array[i-1][j], array[i][j-1])
+            array[i][j] = 1 + min(array[i - 1][j - 1], array[i - 1][j], array[i][j - 1])
 
 min_edits = array[len(seq0)][len(seq1)]
 print(min_edits)

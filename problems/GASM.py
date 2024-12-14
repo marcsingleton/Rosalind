@@ -22,8 +22,8 @@ max_k = min([len(seq) for seq in seqs]) - 1
 for k in range(max_k, 0, -1):
     kmers = []
     for seq in seqs:
-        for i in range(len(seq)-k):
-            kmers.append(seq[i:i+k+1])
+        for i in range(len(seq) - k):
+            kmers.append(seq[i : i + k + 1])
 
     graph = {}
     for kmer in kmers:

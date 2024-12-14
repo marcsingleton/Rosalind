@@ -56,7 +56,7 @@ for nameA, nameB, index, length in edges:
     nodeA, nodeB = name2node[nameA], name2node[nameB]
     nodeA.children.append(nodeB)
     nodeB.parent = nodeA
-    nodeB.substring = s[index-1:index-1+length]
+    nodeB.substring = s[index - 1 : index - 1 + length]
 
 name = list(names)[0]
 tree = name2node[name]

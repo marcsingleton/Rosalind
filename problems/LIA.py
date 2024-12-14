@@ -15,10 +15,10 @@ N = 34
 
 # No matter the genotype of the parent, probability of double het is always 25%
 p = 0.25
-max_k = 2 ** k
+max_k = 2**k
 pmfs = []
-for i in range(max_k+1):
-    pmf = comb(max_k, i) * p ** i * (1 - p) ** (max_k - i)
+for i in range(max_k + 1):
+    pmf = comb(max_k, i) * p**i * (1 - p) ** (max_k - i)
     pmfs.append(pmf)
 
 q = sum(pmfs[N:])

@@ -43,7 +43,7 @@ while i < len(lines):
     tree = read_newick(data_path)
     os.remove(data_path)
 
-    node_name1, node_name2 = lines[i+1].split()
+    node_name1, node_name2 = lines[i + 1].split()
     records.append((tree, node_name1, node_name2))
     i += 2
 

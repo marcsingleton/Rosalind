@@ -38,7 +38,7 @@ for index, kmer in enumerate(sorted(product(*[alphabet for _ in range(k)]))):
 
 array = np.zeros(len(kmer2index), dtype=int)
 for i in range(len(seq) - k + 1):
-    kmer = seq[i:i+k]
+    kmer = seq[i : i + k]
     index = kmer2index[tuple(kmer)]
     array[index] += 1
 

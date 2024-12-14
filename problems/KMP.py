@@ -24,10 +24,10 @@ header, seq = fasta[0]
 
 array = [0 for _ in seq]
 for j in range(1, len(seq)):
-    value = array[j-1]
-    for i in range(value+1, 0, -1):
+    value = array[j - 1]
+    for i in range(value + 1, 0, -1):
         prefix = seq[:i]
-        suffix = seq[j+1-i:j+1]
+        suffix = seq[j + 1 - i : j + 1]
         if prefix == suffix:
             array[j] = i
             break

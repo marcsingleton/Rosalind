@@ -7,7 +7,7 @@ Return: The substrings of s∗ encoding the edges of the suffix tree for s. You 
 
 from utils.newick import TreeNode
 
-data = "ATAAATG$"
+data = 'ATAAATG$'
 
 suffixes = []
 for i in range(len(data)):

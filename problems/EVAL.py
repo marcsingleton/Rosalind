@@ -14,8 +14,12 @@ A = '0.000 0.071 0.150 0.195 0.265 0.307 0.360 0.432 0.464 0.537 0.576 0.658 0.7
 qs = []
 gcs = [float(a) for a in A.split()]
 for gc in gcs:
-    ps = {'A': (1 - gc) / 2, 'C': gc / 2,
-          'G': gc / 2, 'T': (1 - gc) / 2}
+    ps = {
+        'A': (1 - gc) / 2,
+        'C': gc / 2,
+        'G': gc / 2,
+        'T': (1 - gc) / 2,
+    }
     p_match = 1
     for sym in s:
         p_match *= ps[sym]

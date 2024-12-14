@@ -23,8 +23,8 @@ def get_ORFs(seq):
 
 def translate(seq, gencode):
     aas = []
-    for i in range(0, len(seq)-3, 3):
-        codon = seq[i:i+3]
+    for i in range(0, len(seq) - 3, 3):
+        codon = seq[i : i + 3]
         aas.append(gencode[codon])
     return ''.join(aas)
 
@@ -71,8 +71,14 @@ with open('constants/codons.txt') as file:
 
 RNA_forward = to_RNA(seq)
 RNA_reverse = to_RNA(reverse_complement(seq))
-seqs = [RNA_forward, RNA_forward[1:], RNA_forward[2:],
-        RNA_reverse, RNA_reverse[1:], RNA_reverse[2:]]
+seqs = [
+    RNA_forward,
+    RNA_forward[1:],
+    RNA_forward[2:],
+    RNA_reverse,
+    RNA_reverse[1:],
+    RNA_reverse[2:],
+]
 
 ORFs = []
 for seq in seqs:

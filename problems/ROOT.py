@@ -7,7 +7,7 @@ Return: Let B(n) represent the total number of distinct rooted binary trees on n
 """
 
 n = 879
-mod = int(1E6)
+mod = int(1e6)
 
 # This is effectively the same solution as CUNR, but with adding one to n
 # This works because any rooted tree can be made into an unrooted tree by adding a "dummy" leaf to the root

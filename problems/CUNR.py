@@ -7,7 +7,7 @@ modulo 1,000,000.
 """
 
 n = 857
-mod = int(1E6)
+mod = int(1e6)
 
 e = 2 * (n - 1) - 3
 b = 1

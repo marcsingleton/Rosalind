@@ -48,17 +48,17 @@ header, seq = fasta[0]
 # Initialize DP array
 n = len(seq)
 array = np.zeros((n, n), dtype=bool)
-for i in range(n-1):
-    sym1, sym2 = seq[i], seq[i+1]
+for i in range(n - 1):
+    sym1, sym2 = seq[i], seq[i + 1]
     if sym1 == complements[sym2]:
-        array[i, i+1] = True
+        array[i, i + 1] = True
 
 # Fill DP array along diagonals
 for delta in range(2, n):
     for j in range(delta, n):
         i = j - delta
         sym1, sym2 = seq[i], seq[j]
-        if sym1 == complements[sym2] and array[i+1, j-1]:
+        if sym1 == complements[sym2] and array[i + 1, j - 1]:
             array[i, j] = True
 
 # Iterate over DP array and print results
