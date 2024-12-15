@@ -3,6 +3,15 @@
 Given: Two protein strings s and t in FASTA format (each of length at most 1000 aa).
 
 Return: The edit distance dE(s,t).
+
+Sample input:
+>Rosalind_39
+PLEASANTLY
+>Rosalind_11
+MEANLY
+
+Sample output:
+5
 """
 
 import os

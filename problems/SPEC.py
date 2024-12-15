@@ -4,6 +4,16 @@ Given: A list L of n (n ≤ 100) positive real numbers.
 
 Return: A protein string of length n−1 whose prefix spectrum is equal to L (if multiple solutions exist, you may output
 any one of them). Consult the monoisotopic mass table.
+
+Sample input:
+3524.8542
+3710.9335
+3841.974
+3970.0326
+4057.0646
+
+Sample output:
+WMQS
 """
 
 data = """\

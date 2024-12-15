@@ -3,8 +3,15 @@
 Given: An unrooted binary tree T in Newick format for at most 200 species taxa.
 
 Return: A character table having the same splits as the edge splits of T. The columns of the character table should
-encode the taxa ordered lexicographically; the rows of the character table may be given in any order. Also, for any
+encode the taxa ordered lexicographically; the rows of the character table may be given in any order. Also, for any 
 given character, the particular subset of taxa to which 1s are assigned is arbitrary.
+
+Sample input:
+(dog,((elephant,mouse),robot),cat);
+
+Sample output:
+00110
+00111
 """
 
 import os

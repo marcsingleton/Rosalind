@@ -4,6 +4,16 @@ Given: A collection of n weighted trees (n ≤ 40) in Newick format, with each t
 tree Tk is followed by a pair of nodes xk and yk in Tk.
 
 Return: A collection of n numbers, for which the kth number represents the distance between xk and yk in Tk.
+
+Sample input:
+(dog:42,cat:33);
+cat dog
+
+((dog:4,cat:3):74,robot:98,elephant:58);
+dog elephant
+
+Sample output:
+75 136
 """
 
 import os
@@ -25,7 +35,10 @@ def get_paths(tree):
 
 
 data = """\
-(dog:10,(cat:9,(mice:10,elephant:15):10,(horse:10, donkey:20):100):20);
+(dog:42,cat:33);
+cat dog
+
+((dog:4,cat:3):74,robot:98,elephant:58);
 dog elephant
 """
 

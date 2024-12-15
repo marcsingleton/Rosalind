@@ -4,13 +4,19 @@ Given: Positive integers N (N ≤ 7), m (m ≤ 2N), g (g ≤ 6) and k (k ≤ 2N)
 
 Return: The probability that in a population of N diploid individuals initially possessing m copies of a dominant
 allele, we will observe after g generations at least k copies of a recessive allele. Assume the Wright-Fisher model.
+
+Sample input:
+4 6 2 1
+
+Sample output:
+0.772
 """
 
 from math import comb
 
 import numpy as np
 
-N, m, g, k, = 6, 9, 6, 6  # fmt: off
+N, m, g, k = 4, 6, 2, 1
 
 P = np.zeros((2 * N + 1, 2 * N + 1))
 for i in range(2 * N + 1):

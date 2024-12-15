@@ -4,6 +4,13 @@ Given: An RNA string s of length at most 80 bp having the same number of occurre
 of occurrences of 'C' as 'G'.
 
 Return: The total possible number of perfect matchings of basepair edges in the bonding graph of s.
+
+Sample input:
+>Rosalind_23
+AGCUAGUCAU
+
+Sample output:
+12
 """
 
 import os
@@ -12,9 +19,8 @@ from math import factorial
 from utils import read_fasta
 
 data = """\
->Rosalind_0690
-UCCCAAGAUAGCGGGUUCGAUGCAAAAAAAUAAGGUUCUGGCAACGAGUCUUGCCUGUUG
-CCUCUACAGCUCCUGCUGAG
+>Rosalind_23
+AGCUAGUCAU
 """
 
 data_path = 'PMCH.txt'

@@ -4,6 +4,20 @@ Given: A list L (of length at most 100) containing positive real numbers.
 
 Return: The longest protein string that matches the spectrum graph of L (if multiple solutions exist, you may output any
 one of them). Consult the monoisotopic mass table.
+
+Sample input:
+3524.8542
+3623.5245
+3710.9335
+3841.974
+3929.00603
+3970.0326
+4026.05879
+4057.0646
+4083.08025
+
+Sample output:
+WMSPG
 """
 
 from itertools import permutations

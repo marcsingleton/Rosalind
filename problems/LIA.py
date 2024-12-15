@@ -6,12 +6,18 @@ always mates with an organism having genotype Aa Bb.
 
 Return: The probability that at least N Aa Bb organisms will belong to the k-th generation of Tom's family tree (don't
 count the Aa Bb mates at each level). Assume that Mendel's second law holds for the factors.
+
+Sample input:
+2 1
+
+Sample output:
+0.684
 """
 
 from math import comb
 
-k = 7
-N = 34
+k = 2
+N = 1
 
 # No matter the genotype of the parent, probability of double het is always 25%
 p = 0.25

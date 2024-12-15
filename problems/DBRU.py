@@ -4,6 +4,25 @@ Given: A collection of up to 1000 (possibly repeating) DNA strings of equal leng
 to a set S of (k+1)-mers.
 
 Return: The adjacency list corresponding to the de Bruijn graph corresponding to S∪Src.
+
+Sample input:
+TGAT
+CATG
+TCAT
+ATGC
+CATC
+CATC
+
+Sample output:
+(ATC, TCA)
+(ATG, TGA)
+(ATG, TGC)
+(CAT, ATC)
+(CAT, ATG)
+(GAT, ATG)
+(GCA, CAT)
+(TCA, CAT)
+(TGA, GAT)
 """
 
 from utils import reverse_complement

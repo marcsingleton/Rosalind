@@ -6,6 +6,18 @@ simple cycle.
 
 Return: A cyclic superstring of minimal length containing the reads (thus corresponding to a candidate cyclic
 chromosome).
+
+Sample input:
+ATTAC
+TACAG
+GATTA
+ACAGA
+CAGAT
+TTACA
+AGATT
+
+Sample output:
+GATTACA
 """
 
 data = """\

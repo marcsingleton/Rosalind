@@ -3,6 +3,12 @@
 Given: A DNA string s of length at most 1000 bp.
 
 Return: The reverse complement sc of s.
+
+Sample input:
+AAAACCCGGT
+
+Sample output:
+ACCGGGTTTT
 """
 
 from utils import reverse_complement

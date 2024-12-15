@@ -5,6 +5,17 @@ given in FASTA format.
 
 Return: A protein string resulting from transcribing and translating the exons of s. (Note: Only one solution will exist
 for the dataset provided.)
+
+Sample input:
+>Rosalind_10
+ATGGTCTACATAGCTGACAAACAGCACGTAGCAATCGGTCGAATCTCGAGAGGCATATGGTCACATGATCGGTCGAGCGTGTTTCAAAGTTTGCGCCTAG
+>Rosalind_12
+ATCGGTCGAA
+>Rosalind_15
+ATCGGTCGAGCGTGT
+
+Sample output:
+MVYIADKQHVASREAYGHMFKVCA
 """
 
 import os

@@ -3,6 +3,13 @@
 Given: A positive integer n (4 ≤ n ≤ 5000), followed by an unrooted binary tree T in Newick format on n taxa.
 
 Return: Let q(T) denote the total number of quartets that are consistent with T. The value of q(T) modulo 1,000,000.
+
+Sample input:
+6
+(lobster,(cat,dog),(caterpillar,(elephant,mouse)));
+
+Sample output:
+15
 """
 
 from math import comb

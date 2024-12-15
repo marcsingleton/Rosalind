@@ -4,6 +4,14 @@ Given: A collection of at most 3,000 species taxa and two unrooted binary trees 
 format.
 
 Return: The split distance dsplit(T1,T2).
+
+Sample input:
+dog rat elephant mouse cat rabbit
+(rat,(dog,cat),(rabbit,(elephant,mouse)));
+(rat,(cat,dog),(elephant,(mouse,rabbit)));
+
+Sample output:
+2
 """
 
 import os

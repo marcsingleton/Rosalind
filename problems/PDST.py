@@ -5,6 +5,22 @@ format.
 
 Return: The matrix D corresponding to the p-distance dp on the given strings. As always, note that your answer is
 allowed an absolute error of 0.001.
+
+Sample input:
+>Rosalind_9499
+TTTCCATTTA
+>Rosalind_0942
+GATTCATTTC
+>Rosalind_6568
+TTTCCATTTT
+>Rosalind_1833
+GTTCCATTTA
+
+Sample output:
+0.00000 0.40000 0.10000 0.10000
+0.40000 0.00000 0.40000 0.30000
+0.10000 0.40000 0.00000 0.20000
+0.10000 0.30000 0.20000 0.00000
 """
 
 import os

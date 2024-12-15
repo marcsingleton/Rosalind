@@ -4,6 +4,14 @@ Given: A collection of species names representing n taxa.
 
 Return: A list containing all unrooted binary trees whose leaves are these n taxa. Trees should be given in Newick
 format, with one tree on each line; the order of the trees is unimportant.
+
+Sample input:
+dog cat mouse elephant
+
+Sample output:
+(((mouse,cat),elephant))dog;
+(((elephant,mouse),cat))dog;
+(((elephant,cat),mouse))dog;
 """
 
 from utils.tree import TreeNode

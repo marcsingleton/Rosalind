@@ -4,6 +4,17 @@ Given: An inconsistent character table C on at most 100 taxa.
 
 Return: A submatrix of C′ representing a consistent character table on the same taxa and formed by deleting a single row
 of C. (If multiple solutions exist, you may return any one.)
+
+Sample input:
+100001
+000110
+111000
+100111
+
+Sample output:
+000110
+100001
+100111
 """
 
 from itertools import combinations, product

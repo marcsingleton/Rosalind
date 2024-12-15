@@ -4,6 +4,14 @@ Given: Two multisets of positive real numbers S1 and S2. The size of each multis
 
 Return: The largest multiplicity of S1⊖S2, as well as the absolute value of the number x maximizing (S1⊖S2)(x) (you may
 return any such value if multiple solutions exist).
+
+Sample input:
+186.07931 287.12699 548.20532 580.18077 681.22845 706.27446 782.27613 968.35544 968.35544
+101.04768 158.06914 202.09536 318.09979 419.14747 463.17369
+
+Sample output:
+3
+85.03163
 """
 
 from itertools import product

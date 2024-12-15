@@ -8,6 +8,24 @@ Return: A protein string t of length n for which there exist two positive real n
 prefix p and suffix s of t, each of w(p)+w1 and w(s)+w2 is equal to an element of L. (In other words, there exists a
 protein string whose t-prefix and t-suffix weights correspond to the non-parent mass values of L.) If multiple solutions
 exist, you may output any one.
+
+Sample input:
+1988.21104821
+610.391039105
+738.485999105
+766.492149105
+863.544909105
+867.528589105
+992.587499105
+995.623549105
+1120.6824591
+1124.6661391
+1221.7188991
+1249.7250491
+1377.8200091
+
+Sample output:
+KEKEP
 """
 
 from math import isclose

@@ -5,6 +5,12 @@ factor in a diploid population. Assume that the population is in genetic equilib
 
 Return: An array B having the same length as A in which B[k] represents the probability that a randomly selected
 individual carries at least one copy of the recessive allele for the k-th factor.
+
+Sample input:
+0.1 0.25 0.5
+
+Sample output:
+0.532 0.75 0.914
 """
 
 A = '0.1 0.25 0.5'

@@ -1,4 +1,27 @@
-"""Matching a Spectrum to a Protein."""
+"""Matching a Spectrum to a Protein.
+
+Given: A positive integer n followed by a collection of n protein strings s1, s2, ..., sn and a multiset R of positive
+numbers (corresponding to the complete spectrum of some unknown protein string).
+
+Returns: The maximum multiplicity of R⊖S[sk] taken over all strings sk, followed by the string sk for which this maximum
+multiplicity occurs (you may output any such value if multiple solutions exist).
+
+Sample input:
+4
+GSDMQS
+VWICN
+IASWMQS
+PVSMGAD
+445.17838
+115.02694
+186.07931
+314.13789
+317.1198
+215.09061
+
+Sample output:
+3
+"""
 
 from itertools import product
 

@@ -4,12 +4,57 @@ Given: A permutation of at most 12 symbols defining an ordered alphabet 𝒜 and
 
 Return: All strings of length at most n formed from 𝒜, ordered lexicographically. (Note: As in “Enumerating k-mers
 Lexicographically”, alphabet order is based on the order in which the symbols are given.)
+
+Sample input:
+D N A
+3
+
+Sample output:
+D
+DD
+DDD
+DDN
+DDA
+DN
+DND
+DNN
+DNA
+DA
+DAD
+DAN
+DAA
+N
+ND
+NDD
+NDN
+NDA
+NN
+NND
+NNN
+NNA
+NA
+NAD
+NAN
+NAA
+A
+AD
+ADD
+ADN
+ADA
+AN
+AND
+ANN
+ANA
+AA
+AAD
+AAN
+AAA
 """
 
 from itertools import product
 
-alphabet = 'V L B D I Y T Z X G E'
-n = 4
+alphabet = 'D N A'
+n = 3
 
 alphabet = alphabet.split()
 order = {sym: i for i, sym in enumerate(alphabet)}

@@ -3,6 +3,23 @@
 Given: A DNA string s of length at most 1kbp.
 
 Return: The substrings of s∗ encoding the edges of the suffix tree for s. You may list these substrings in any order.
+
+Sample input:
+ATAAATG$
+
+Sample output:
+AAATG$
+G$
+T
+ATG$
+TG$
+A
+A
+AAATG$
+G$
+T
+G$
+$
 """
 
 from utils.tree import TreeNode

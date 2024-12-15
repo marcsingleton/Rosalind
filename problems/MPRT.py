@@ -4,24 +4,30 @@ Given: At most 15 UniProt Protein Database access IDs.
 
 Return: For each protein possessing the N-glycosylation motif, output its given access ID followed by a list of
 locations in the protein string where the motif can be found.
+
+Sample input:
+A2Z669
+B5ZC00
+P07204_TRBM_HUMAN
+P20840_SAG1_YEAST
+
+Sample output:
+B5ZC00
+85 118 142 306 395
+P07204_TRBM_HUMAN
+47 115 116 382 409
+P20840_SAG1_YEAST
+79 109 135 248 306 348 364 402 485 501 614
 """
 
 import re
 import urllib
 
 data = """\
-P0AAM4
-P19835_BAL_HUMAN
-P06870_KLK1_HUMAN
-P01045_KNH2_BOVIN
-A4TI59
-Q16775
-P28314_PER_COPCI
-P11831_SRF_HUMAN
-P02765_A2HS_HUMAN
-Q3Z2Z2
-P08514_ITAB_HUMAN
-P21735
+A2Z669
+B5ZC00
+P07204_TRBM_HUMAN
+P20840_SAG1_YEAST
 """
 
 motif = r'(?=N[^P][ST][^P])'  # Need a lookahead assertion to get overlapping matches

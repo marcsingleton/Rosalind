@@ -4,6 +4,16 @@ Given: A collection of n trees (n ≤ 40) in Newick format, with each tree conta
 followed by a pair of nodes xk and yk in Tk.
 
 Return: A collection of n positive integers, for which the kth integer represents the distance between xk and yk in Tk.
+
+Sample input:
+(cat)dog;
+dog cat
+
+(dog,cat);
+dog cat
+
+Sample output:
+1 2
 """
 
 import os

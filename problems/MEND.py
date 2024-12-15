@@ -5,6 +5,13 @@ are A (dominant) and a (recessive).
 
 Return: Three numbers between 0 and 1, corresponding to the respective probabilities that the individual at the root of
 T will exhibit the "AA", "Aa" and "aa" genotypes.
+
+
+Sample input:
+((((Aa,aa),(Aa,Aa)),((aa,aa),(aa,AA))),Aa);
+
+Sample output:
+0.156 0.5 0.344
 """
 
 import os

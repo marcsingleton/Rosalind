@@ -3,6 +3,13 @@
 Given: An RNA string s of length at most 100.
 
 Return: The total possible number of maximum matchings of basepair edges in the bonding graph of s.
+
+Sample input:
+>Rosalind_92
+AUGCUUC
+
+Sample output:
+6
 """
 
 import os
@@ -12,9 +19,8 @@ from utils import read_fasta
 
 
 data = """\
->Rosalind_8322
-CAUAGUGCAGCCGUGAAGUGCCAAAGCUGGCAACGCGUUCUCCCGUACGUUGGAACUCGA
-UCCGGAACUACAAUGGCACCGCGCCAUUGUCUUA
+>Rosalind_92
+AUGCUUC
 """
 
 data_path = 'MMCH.txt'

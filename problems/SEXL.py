@@ -5,6 +5,12 @@ total recessive X-linked genes. Assume that the population is in genetic equilib
 
 Return: An array B of length n in which B[k] equals the probability that a randomly selected female will be a carrier
 for the k-th gene.
+
+Sample input:
+0.1 0.5 0.8
+
+Sample output:
+0.18 0.5 0.32
 """
 
 A = '0.1 0.5 0.8'

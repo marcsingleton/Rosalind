@@ -4,6 +4,18 @@ Given: A partial character table C.
 
 Return: The collection of all quartets that can be inferred from the splits corresponding to the underlying characters
 of C.
+
+Sample input:
+cat dog elephant ostrich mouse rabbit robot
+01xxx00
+x11xx00
+111x00x
+
+Sample output:
+{elephant, dog} {rabbit, robot}
+{cat, dog} {mouse, rabbit}
+{mouse, rabbit} {cat, elephant}
+{dog, elephant} {mouse, rabbit}
 """
 
 from itertools import combinations, product

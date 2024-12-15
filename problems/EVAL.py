@@ -5,11 +5,19 @@ most 20, containing numbers between 0 and 1.
 
 Return: An array B having the same length as A in which B[i] represents the expected number of times that s will appear
 as a substring of a random DNA string t of length n, where t is formed with GC-content A[i].
+
+Sample input:
+10
+AG
+0.25 0.5 0.75
+
+Sample output:
+0.422 0.563 0.422
 """
 
-n = 868215
-s = 'ATCAGTTCT'
-A = '0.000 0.071 0.150 0.195 0.265 0.307 0.360 0.432 0.464 0.537 0.576 0.658 0.703 0.745 0.807 0.853 0.936 1.000'
+n = 10
+s = 'AG'
+A = '0.25 0.5 0.75'
 
 qs = []
 gcs = [float(a) for a in A.split()]

@@ -5,11 +5,18 @@ Given: A positive integer N ≤ 100000, a number x between 0 and 1, and a DNA st
 Return: The probability that if N random DNA strings having the same length as s are constructed with GC-content x (see
 “Introduction to Random Strings”), then at least one of the strings equals s. We allow for the same random string to be
 created more than once.
+
+Sample input:
+90000 0.6
+ATAGCCGA
+
+Sample output:
+0.689
 """
 
-N = 97023
-gc = 0.515636
-s = 'TCCAACATA'
+N = 90000
+gc = 0.6
+s = 'ATAGCCGA'
 
 ps = {
     'A': (1 - gc) / 2,

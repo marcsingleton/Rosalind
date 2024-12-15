@@ -3,6 +3,14 @@
 Given: A positive integer n ≤ 10000 followed by a permutation π of length n.
 
 Return: A longest increasing subsequence of π, followed by a longest decreasing subsequence of π.
+
+Sample input:
+5
+5 1 4 2 3
+
+Sample output:
+1 2 3
+5 4 2
 """
 
 

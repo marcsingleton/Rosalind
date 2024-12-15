@@ -5,15 +5,24 @@ number of recessive alleles for the j-th factor in a population of N diploid ind
 
 Return: An m×k matrix B for which Bi,j represents the common logarithm of the probability that after i generations, no
 copies of the recessive allele for the j-th factor will remain in the population. Apply the Wright-Fisher model.
+
+Sample input:
+4 3
+0 1 2
+
+Sample output:
+0.0 -0.463935575821 -0.999509892866
+0.0 -0.301424998891 -0.641668367342
+0.0 -0.229066698008 -0.485798552456
 """
 
 from math import comb
 
 import numpy as np
 
-N = 19
-m = 4
-A = '4 9 12'
+N = 4
+m = 3
+A = '0 1 2'
 
 A = [int(a) for a in A.split()]
 x = np.zeros((len(A), 2 * N + 1))

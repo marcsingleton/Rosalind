@@ -5,6 +5,13 @@ Given: A positive integer n (n ≤ 1000000) followed by an array P of length m (
 
 Return: An array B of length m for which B[k] is the expected value of Bin(n, P[k]) ; in terms of Wright-Fisher, it
 represents the expected allele frequency of the next generation.
+
+Sample input:
+17
+0.1 0.2 0.3
+
+Sample output:
+1.7 3.4 5.1
 """
 
 n = 17

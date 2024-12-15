@@ -7,6 +7,19 @@ The dataset is guaranteed to satisfy the following condition: there exists a uni
 chromosome from these reads by gluing together pairs of reads that overlap by more than half their length.
 
 Return: A shortest superstring containing all the given strings (thus corresponding to a reconstructed chromosome).
+
+Sample input:
+>Rosalind_56
+ATTAGACCTG
+>Rosalind_57
+CCTGCCGGAA
+>Rosalind_58
+AGACCTGCCG
+>Rosalind_59
+GCCGGAATAC
+
+Sample output:
+ATTAGACCTGCCGGAATAC
 """
 
 import os

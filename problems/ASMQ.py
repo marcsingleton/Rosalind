@@ -3,6 +3,15 @@
 Given: A collection of at most 1000 DNA strings (whose combined length does not exceed 50 kbp).
 
 Return: N50 and N75 for this collection of strings.
+
+Sample input:
+GATTACA
+TACTACTAC
+ATTGAT
+GAAGA
+
+Sample output:
+7 6
 """
 
 from itertools import groupby

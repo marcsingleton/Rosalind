@@ -3,6 +3,12 @@
 Given: A multiset L containing (n2) positive integers for some positive integer n.
 
 Return: A set X containing n nonnegative integers such that ΔX=L.
+
+Sample input:
+2 2 3 3 4 5 6 7 8 10
+
+Sample output:
+0 2 4 7 10
 """
 
 

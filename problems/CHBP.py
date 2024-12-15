@@ -3,6 +3,15 @@
 Given: A list of n species (n ≤ 80) and an n-column character table C in which the jth column denotes the jth species.
 
 Return: An unrooted binary tree in Newick format that models C.
+
+Sample input:
+cat dog elephant mouse rabbit rat
+011101
+001101
+001100
+
+Sample output:
+(dog,(cat,rabbit),(rat,(elephant,mouse)));
 """
 
 from utils.tree import TreeNode

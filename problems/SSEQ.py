@@ -4,6 +4,15 @@ Given: Two DNA strings s and t (each of length at most 1 kbp) in FASTA format.
 
 Return: One collection of indices of s in which the symbols of t appear as a subsequence of s. If multiple solutions
 exist, you may return any one.
+
+Sample input:
+>Rosalind_14
+ACGTACGTGACG
+>Rosalind_18
+GTA
+
+Sample output:
+3 8 10
 """
 
 import os

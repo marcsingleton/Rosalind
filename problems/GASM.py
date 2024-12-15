@@ -4,6 +4,15 @@ Given: A collection S of (error-free) reads of equal length (not exceeding 50 bp
 integer k, the de Bruijn graph Bk on Sk+1∪Srck+1 consists of exactly two directed cycles.
 
 Return: A cyclic superstring of minimal length containing every read or its reverse complement.
+
+Sample input:
+AATCT
+TGTAA
+GATTA
+ACAGA
+
+Sample output:
+GATTACA
 """
 
 from utils import reverse_complement

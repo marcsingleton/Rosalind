@@ -6,6 +6,22 @@ Return: The adjacency list corresponding to the trie T for these patterns, in th
 first label the root with 1 and then label the remaining nodes with the integers 2 through n in any order you like. Each
 edge of the adjacency list of T will be encoded by a triple containing the integer representing the edge's parent node,
 followed by the integer representing the edge's child node, and finally the symbol labeling the edge.
+
+Sample input:
+ATAGA
+ATC
+GAT
+
+Sample output:
+1 2 A
+2 3 T
+3 4 A
+4 5 G
+5 6 A
+3 7 C
+1 8 G
+8 9 A
+9 10 T
 """
 
 from utils.tree import TreeNode

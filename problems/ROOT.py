@@ -4,9 +4,15 @@ Given: A positive integer n (n ≤ 1000).
 
 Return: Let B(n) represent the total number of distinct rooted binary trees on n labeled taxa. The value of b(n) modulo
 1,000,000.
+
+Sample input:
+4
+
+Sample output:
+15
 """
 
-n = 879
+n = 4
 mod = int(1e6)
 
 # This is effectively the same solution as CUNR, but with adding one to n

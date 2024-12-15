@@ -5,6 +5,33 @@ length ≤ 50).
 
 Return: All circular strings assembled by complete cycles in the de Bruijn graph Bk of Sk+1. The strings may be given in
 any order, but each one should begin with the first (k+1)-mer provided in the input.
+
+Sample input:
+CAG
+AGT
+GTT
+TTT
+TTG
+TGG
+GGC
+GCG
+CGT
+GTT
+TTC
+TCA
+CAA
+AAT
+ATT
+TTC
+TCA
+
+Sample output:
+CAGTTCAATTTGGCGTT
+CAGTTCAATTGGCGTTT
+CAGTTTCAATTGGCGTT
+CAGTTTGGCGTTCAATT
+CAGTTGGCGTTCAATTT
+CAGTTGGCGTTTCAATT
 """
 
 from collections import Counter

@@ -4,11 +4,25 @@ Given: A positive integer n ≤ 6.
 
 Return: The total number of signed permutations of length n, followed by a list of all such permutations (you may list
 the signed permutations in any order).
+
+Sample input:
+2
+
+Sample output:
+8
+-1 -2
+-1 2
+1 -2
+1 2
+-2 -1
+-2 1
+2 -1
+2 1
 """
 
 from itertools import permutations, product
 
-n = 5
+n = 2
 
 items = [str(i) for i in range(1, n + 1)]
 signs = ['', '-']

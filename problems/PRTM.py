@@ -3,6 +3,12 @@
 Given: A protein string P of length at most 1000 aa.
 
 Return: The total weight of P. Consult the monoisotopic mass table.
+
+Sample input:
+SKADYEK
+
+Sample output:
+821.392
 """
 
 seq = 'SKADYEK'

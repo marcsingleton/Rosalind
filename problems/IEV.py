@@ -13,6 +13,12 @@ aa-aa
 
 Return: The expected number of offspring displaying the dominant phenotype in the next generation, under the assumption
 that every couple has exactly two offspring.
+
+Sample input:
+1 0 0 1 0 1
+
+Sample output:
+3.5
 """
 
 from itertools import product

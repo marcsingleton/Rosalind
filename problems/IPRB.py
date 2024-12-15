@@ -5,9 +5,15 @@ homozygous dominant for a factor, m are heterozygous, and n are homozygous reces
 
 Return: The probability that two randomly selected mating organisms will produce an individual possessing a dominant
 allele (and thus displaying the dominant phenotype). Assume that any two organisms can mate.
+
+Sample input:
+2 2 2
+
+Sample output:
+0.78333
 """
 
-k, m, n = 23, 18, 17
+k, m, n = 2, 2, 2
 
 N = k + m + n
 p_het = m / N * (m - 1) / (N - 1) / 4  # Two hets mating
