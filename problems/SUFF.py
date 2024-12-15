@@ -5,7 +5,7 @@ Given: A DNA string s of length at most 1kbp.
 Return: The substrings of s∗ encoding the edges of the suffix tree for s. You may list these substrings in any order.
 """
 
-from utils.newick import TreeNode
+from utils.tree import TreeNode
 
 data = 'ATAAATG$'
 

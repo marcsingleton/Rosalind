@@ -8,7 +8,7 @@ edge of the adjacency list of T will be encoded by a triple containing the integ
 followed by the integer representing the edge's child node, and finally the symbol labeling the edge.
 """
 
-from utils.newick import TreeNode
+from utils.tree import TreeNode
 
 data = """\
 ATAGA

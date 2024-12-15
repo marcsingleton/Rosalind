@@ -12,7 +12,7 @@ Return: The longest substring of s that occurs at least k times in s. (If multip
 single solution.)
 """
 
-from utils.newick import TreeNode
+from utils.tree import TreeNode
 
 data = """\
 CATACATAC$

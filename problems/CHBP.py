@@ -5,7 +5,7 @@ Given: A list of n species (n ≤ 80) and an n-column character table C in which
 Return: An unrooted binary tree in Newick format that models C.
 """
 
-from utils.newick import TreeNode
+from utils.tree import TreeNode
 
 
 def get_lca(tree, taxa):

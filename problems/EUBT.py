@@ -6,7 +6,7 @@ Return: A list containing all unrooted binary trees whose leaves are these n tax
 format, with one tree on each line; the order of the trees is unimportant.
 """
 
-from utils.newick import TreeNode
+from utils.tree import TreeNode
 
 data = 'Burhinus_constricticollis Haliaetus_regius Pelecanus_grupus Phyllopneuste_leucorodia Rosalia_eburnea Thecla_taxus'
 
