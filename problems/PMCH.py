@@ -13,21 +13,17 @@ Sample output:
 12
 """
 
-import os
+from io import StringIO
 from math import factorial
 
-from utils import read_fasta
+from utils import parse_fasta
 
 data = """\
 >Rosalind_23
 AGCUAGUCAU
 """
 
-data_path = 'PMCH.txt'
-with open(data_path, 'w') as file:
-    file.write(data)
-fasta = list(read_fasta(data_path))
-os.remove(data_path)
+fasta = list(parse_fasta(StringIO(data)))
 
 _, seq = fasta[0]
 

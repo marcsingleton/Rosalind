@@ -36,9 +36,9 @@ GAGGA->GATGA
 TTTCC->TTTCA
 """
 
-import os
+from io import StringIO
 
-from utils import read_fasta, reverse_complement
+from utils import parse_fasta, reverse_complement
 
 
 def get_hamming(s1, s2):
@@ -69,11 +69,7 @@ TTGAT
 TTTCC
 """
 
-data_path = 'CORR.txt'
-with open(data_path, 'w') as file:
-    file.write(data)
-fasta = list(read_fasta(data_path))
-os.remove(data_path)
+fasta = list(parse_fasta(StringIO(data)))
 
 seqs = [seq for _, seq in fasta]
 

@@ -16,7 +16,9 @@ MGMTPRLGLESLLE
 MTPRLGLESLLE
 """
 
-from utils import read_fasta, reverse_complement
+from io import StringIO
+
+from utils import parse_fasta, reverse_complement
 
 
 def get_ORFs(seq):
@@ -48,11 +50,7 @@ data = """\
 AGCCATGTAGCTAACTCAGGTTACATGGGGATGACCCCGCGACTTGGATTAGAGTCTCTTTTGGAATAAGCCTGAATGATCCGAGTAGCATCTCAG
 """
 
-data_path = 'ORF.txt'
-with open(data_path, 'w') as file:
-    file.write(data)
-
-fasta = list(read_fasta(data_path))
+fasta = list(parse_fasta(StringIO(data)))
 header, seq = fasta[0]
 
 gencode = {}

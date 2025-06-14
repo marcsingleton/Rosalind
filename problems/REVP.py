@@ -20,10 +20,10 @@ Sample output:
 21 4
 """
 
-import os
+from io import StringIO
 
 import numpy as np
-from utils import read_fasta
+from utils import parse_fasta
 
 data = """\
 >Rosalind_24
@@ -36,11 +36,7 @@ for sym1, sym2 in pairs:
     complements[sym1] = sym2
     complements[sym2] = sym1
 
-data_path = 'REVP.txt'
-with open(data_path, 'w') as file:
-    file.write(data)
-fasta = list(read_fasta(data_path))
-os.remove(data_path)
+fasta = list(parse_fasta(StringIO(data)))
 
 header, seq = fasta[0]
 

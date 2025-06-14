@@ -22,9 +22,9 @@ Rosalind_0498 Rosalind_0442
 Rosalind_2391 Rosalind_2323
 """
 
-import os
+from io import StringIO
 
-from utils import read_fasta
+from utils import parse_fasta
 
 data = """\
 >Rosalind_0498
@@ -39,11 +39,7 @@ AAATCCC
 GGGTGGG
 """
 
-data_path = 'GRPH.txt'
-with open(data_path, 'w') as file:
-    file.write(data)
-fasta = list(read_fasta(data_path))
-os.remove(data_path)
+fasta = list(parse_fasta(StringIO(data)))
 
 for header1, seq1 in fasta:
     for header2, seq2 in fasta:

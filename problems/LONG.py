@@ -22,11 +22,11 @@ Sample output:
 ATTAGACCTGCCGGAATAC
 """
 
-import os
+from io import StringIO
 from itertools import permutations
 from math import ceil
 
-from utils import read_fasta
+from utils import parse_fasta
 
 
 def has_overlap(s1, s2, r):
@@ -53,11 +53,7 @@ GCCGGAATAC
 
 r = 0.5
 
-data_path = 'LONG.txt'
-with open(data_path, 'w') as file:
-    file.write(data)
-fasta = dict(read_fasta(data_path))
-os.remove(data_path)
+fasta = dict(parse_fasta(StringIO(data)))
 
 graph = {header: [] for header in fasta}
 for (header1, seq1), (header2, seq2) in permutations(fasta.items(), 2):

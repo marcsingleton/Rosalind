@@ -23,11 +23,11 @@ Sample output:
 0.10000 0.30000 0.20000 0.00000
 """
 
-import os
+from io import StringIO
 from itertools import product
 
 import numpy as np
-from utils import read_fasta
+from utils import parse_fasta
 
 data = """\
 >Rosalind_9499
@@ -40,11 +40,7 @@ TTTCCATTTT
 GTTCCATTTA
 """
 
-data_path = 'PDST.txt'
-with open(data_path, 'w') as file:
-    file.write(data)
-fasta = list(read_fasta(data_path))
-os.remove(data_path)
+fasta = list(parse_fasta(StringIO(data)))
 
 indices = {seq_id: index for index, (seq_id, _) in enumerate(fasta)}
 

@@ -14,9 +14,9 @@ Sample output:
 AACTGG
 """
 
-import os
+from io import StringIO
 
-from utils import read_fasta
+from utils import parse_fasta
 
 data = """\
 >Rosalind_23
@@ -25,11 +25,7 @@ AACCTTGG
 ACACTGTGA
 """
 
-data_path = 'LCSQ.txt'
-with open(data_path, 'w') as file:
-    file.write(data)
-fasta = list(read_fasta(data_path))
-os.remove(data_path)
+fasta = list(parse_fasta(StringIO(data)))
 
 seq0 = fasta[0][1]
 seq1 = fasta[1][1]

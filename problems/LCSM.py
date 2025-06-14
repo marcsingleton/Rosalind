@@ -16,9 +16,9 @@ Sample output:
 AC
 """
 
-import os
+from io import StringIO
 
-from utils import read_fasta
+from utils import parse_fasta
 
 
 def get_substrings(s):
@@ -38,11 +38,7 @@ TAGACCA
 ATACA
 """
 
-data_path = 'LCSM.txt'
-with open(data_path, 'w') as file:
-    file.write(data)
-fasta = list(read_fasta(data_path))
-os.remove(data_path)
+fasta = list(parse_fasta(StringIO(data)))
 
 substring_sets = []
 for _, seq in fasta:

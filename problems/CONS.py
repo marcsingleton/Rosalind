@@ -29,9 +29,9 @@ G: 1 1 6 3 0 1 0 0
 T: 1 5 0 0 0 1 1 6
 """
 
-import os
+from io import StringIO
 
-from utils import read_fasta
+from utils import parse_fasta
 
 data = """\
 >Rosalind_1
@@ -50,11 +50,7 @@ ATGCCATT
 ATGGCACT
 """
 
-data_path = 'CONS.txt'
-with open(data_path, 'w') as file:
-    file.write(data)
-fasta = list(read_fasta(data_path))
-os.remove(data_path)
+fasta = list(parse_fasta(StringIO(data)))
 
 profile = []
 consensus = []

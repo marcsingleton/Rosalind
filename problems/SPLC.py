@@ -18,9 +18,9 @@ Sample output:
 MVYIADKQHVASREAYGHMFKVCA
 """
 
-import os
+from io import StringIO
 
-from utils import read_fasta
+from utils import parse_fasta
 
 data = """\
 >Rosalind_10
@@ -31,11 +31,7 @@ ATCGGTCGAA
 ATCGGTCGAGCGTGT
 """
 
-data_path = 'SPLC.txt'
-with open(data_path, 'w') as file:
-    file.write(data)
-fasta = list(read_fasta(data_path))
-os.remove(data_path)
+fasta = list(parse_fasta(StringIO(data)))
 
 _, seq = fasta[0]
 for _, intron in fasta[1:]:
