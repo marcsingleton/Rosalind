@@ -14,9 +14,7 @@ Sample output:
 0.156 0.5 0.344
 """
 
-import os
-
-from utils import read_newick
+from utils import TreeNode
 
 data = """\
 ((((Aa,aa),(Aa,Aa)),((aa,aa),(aa,AA))),Aa);
@@ -24,11 +22,7 @@ data = """\
 
 genotypes = ('AA', 'Aa', 'aa')
 
-data_path = 'MEND.txt'
-with open(data_path, 'w') as file:
-    file.write(data)
-tree = read_newick(data_path)
-os.remove(data_path)
+tree = TreeNode.from_newick(data)
 
 for node in tree.traverse(order='post'):
     if node.is_tip():

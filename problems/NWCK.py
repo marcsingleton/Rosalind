@@ -16,9 +16,7 @@ Sample output:
 1 2
 """
 
-import os
-
-from utils import read_newick
+from utils import TreeNode
 
 
 def get_paths(tree):
@@ -50,11 +48,7 @@ while i < len(lines):
         i += 1
         continue
 
-    data_path = 'NWCK.txt'
-    with open(data_path, 'w') as file:
-        file.write(lines[i])
-    tree = read_newick(data_path)
-    os.remove(data_path)
+    tree = TreeNode.from_newick(lines[i])
 
     node_name1, node_name2 = lines[i + 1].split()
     records.append((tree, node_name1, node_name2))

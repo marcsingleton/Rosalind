@@ -14,19 +14,13 @@ Sample output:
 00111
 """
 
-import os
-
-from utils import read_newick
+from utils import TreeNode
 
 data = """\
 (dog,((elephant,mouse),robot),cat);
 """
 
-data_path = 'CTBL.txt'
-with open(data_path, 'w') as file:
-    file.write(data)
-tree = read_newick(data_path)
-os.remove(data_path)
+tree = TreeNode.from_newick(data)
 
 taxa_order = sorted([tip.name for tip in tree.tips()])
 taxa_set = set(taxa_order)

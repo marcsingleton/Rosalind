@@ -14,9 +14,7 @@ Sample output:
 2
 """
 
-import os
-
-from utils import read_newick
+from utils import TreeNode
 
 
 def get_splits(tree):
@@ -32,15 +30,6 @@ def get_splits(tree):
     return splits
 
 
-def string2tree(newick):
-    data_path = 'SPTD.txt'
-    with open(data_path, 'w') as file:
-        file.write(newick)
-    tree = read_newick(data_path)
-    os.remove(data_path)
-    return tree
-
-
 data = """\
 dog rat elephant mouse cat rabbit
 (rat,(dog,cat),(rabbit,(elephant,mouse)));
@@ -52,8 +41,8 @@ taxa = lines[0].split()
 newick1 = lines[1]
 newick2 = lines[2]
 
-tree1 = string2tree(newick1)
-tree2 = string2tree(newick2)
+tree1 = TreeNode.from_newick(newick1)
+tree2 = TreeNode.from_newick(newick2)
 
 splits1 = get_splits(tree1)
 splits2 = get_splits(tree2)
