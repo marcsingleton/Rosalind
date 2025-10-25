@@ -47,19 +47,19 @@ with open('constants/BLOSUM62.txt') as file:
 N = len(s)
 M = len(t)
 
-dp = [[(0, None) for j in range(M + 1)] for i in range(N + 1)]
+dp = [[0 for j in range(M + 1)] for i in range(N + 1)]
 for i in range(1, N + 1):
-    dp[i][0] = (i * GAP, (-1, 0))
+    dp[i][0] = i * GAP
 for j in range(1, M + 1):
-    dp[0][j] = (j * GAP, (0, -1))
+    dp[0][j] = j * GAP
 for i in range(1, N + 1):
     for j in range(1, M + 1):
         sym_s = s[i - 1]
         sym_t = t[j - 1]
-        v1 = (dp[i - 1][j][0] + GAP, (-1, 0))
-        v2 = (dp[i][j - 1][0] + GAP, (0, -1))
-        v3 = (dp[i - 1][j - 1][0] + S[sym_s][sym_t], (-1, -1))
+        v1 = dp[i - 1][j] + GAP
+        v2 = dp[i][j - 1] + GAP
+        v3 = dp[i - 1][j - 1] + S[sym_s][sym_t]
         vs = [v1, v2, v3]
-        dp[i][j] = max(vs, key=lambda x: x[0])
+        dp[i][j] = max(vs)
 
-print(dp[N][M][0])
+print(dp[N][M])
