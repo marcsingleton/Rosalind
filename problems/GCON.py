@@ -67,15 +67,15 @@ for i in range(1, N + 1):
         vs = [v1, v2, v3]
         L[i][j] = max(vs)
 
-        v1 = L[i - 1][j] + GAP
-        v2 = X[i - 1][j]
-        v3 = Y[i - 1][j] + GAP
+        v1 = L[i][j - 1] + GAP
+        v2 = X[i][j - 1]
+        v3 = Y[i][j - 1] + GAP
         vs = [v1, v2, v3]
         X[i][j] = max(vs)
 
-        v1 = L[i][j - 1] + GAP
-        v2 = X[i][j - 1] + GAP
-        v3 = Y[i][j - 1]
+        v1 = L[i - 1][j] + GAP
+        v2 = X[i - 1][j] + GAP
+        v3 = Y[i - 1][j]
         vs = [v1, v2, v3]
         Y[i][j] = max(vs)
 
